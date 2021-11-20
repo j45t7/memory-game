@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e7e7e5;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #e4c439;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.deck {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 10px;
+}
+
+.card {
+  width: 12rem auto;
+  background: #f0da9f;
+  color: #fbca1c;
+  padding: 1rem;
+  border-radius: 10px;
+  border-top: 0.5px solid #cebf7b;
+  border-bottom: 0.5px solid #cebf7b;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+  border: 3px solid #fbca1c;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-name {
+  color: #333;
+}
+
+.card-type {
+  color: #464646;
+}
