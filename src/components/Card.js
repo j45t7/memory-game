@@ -2,26 +2,26 @@ import React from 'react'
 import './Card.css'
 
 const cardBack = '/img/pokemon.png'
-const Card = ({ poke, flipped, disabled, handleChoice }) => {
+const Card = ({ pokemon, flipped, disabled, handleChoice }) => {
   const handleClick = () => {
     if (!disabled) {
-      handleChoice(poke)
+      handleChoice(pokemon)
     }
   }
-  // flipped = true
+
   return (
     <div className={flipped ? 'flipped' : ''}>
       <div className='front'>
         <div className='card'>
-          <img src={poke.image} alt='card front' />
-          <p className='card-name'>{poke.name}</p>
-          <p className='card-type'>{poke.type}</p>
+          <img src={pokemon.image} alt='card front' />
+          <p className='card__name'>{pokemon.name}</p>
+          <p className='card__type'>{pokemon.type}</p>
         </div>
       </div>
       <div className='back'>
         <div className='card'>
           <img
-            className='backImg'
+            className='back__image'
             src={cardBack}
             alt='card back'
             onClick={handleClick}
