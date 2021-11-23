@@ -1,16 +1,8 @@
-/* .card {
-  position: relative;
-} */
 .card {
-  /* width: 12rem auto;
-  display: block; */
-  /* border: 2px solid #fff; */
-  /* border-radius: 6px; */
-  height: 12rem;
-  width: 12rem;
+  height: 10rem;
+  width: 10rem;
   background: #f0da9f;
   color: #fbca1c;
-  padding: 1rem;
   border-radius: 10px;
   border-top: 0.5px solid #cebf7b;
   border-bottom: 0.5px solid #cebf7b;
@@ -33,8 +25,9 @@
   transform: rotateY(0deg);
   transition-delay: 0.2s;
 }
+
 /* back of card - cover */
-.backImg {
+.back__image {
   width: 100%;
   height: 12rem;
   object-fit: contain;
@@ -50,10 +43,10 @@
   transition-delay: 0s;
 }
 
-.card-name {
+.card__name {
   color: #333;
 }
 
-.card-type {
+.card__type {
   color: #464646;
 }

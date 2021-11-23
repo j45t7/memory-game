@@ -12,46 +12,45 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-h1 {
+.title {
   text-align: center;
   color: #e4c439;
   margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
+.title__image {
+  padding-top: 1rem;
+  width: 15rem;
+}
+
 .deck {
-  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(4, 200px);
-  gap: 10px;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 5px;
 }
-/*
-.card {
-  width: 12rem auto;
-  background: #f0da9f;
-  color: #fbca1c;
+.deck--four {
+  grid-template-columns: repeat(4, 160px);
+}
+
+.deck--five {
+  grid-template-columns: repeat(5, 160px);
+}
+
+.moves {
   padding: 1rem;
-  border-radius: 10px;
-  border-top: 0.5px solid #cebf7b;
-  border-bottom: 0.5px solid #cebf7b;
-  text-align: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: 0.2s ease-in-out all;
-  border: 3px solid #fbca1c;
-} */
-
-/* .card:hover {
-  transform: scale(1.05);
-} */
-
-.card-name {
-  color: #333;
 }
 
-.card-type {
-  color: #464646;
+.level {
+  padding: 1rem;
+}
+
+.level__label {
+  padding: 1rem;
+}
+
+.level__input {
+  margin: 0.25rem;
 }
