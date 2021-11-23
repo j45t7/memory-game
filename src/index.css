@@ -26,7 +26,7 @@ h1 {
   grid-template-columns: repeat(4, 200px);
   gap: 10px;
 }
-
+/*
 .card {
   width: 12rem auto;
   background: #f0da9f;
@@ -42,11 +42,11 @@ h1 {
   cursor: pointer;
   transition: 0.2s ease-in-out all;
   border: 3px solid #fbca1c;
-}
+} */
 
-.card:hover {
+/* .card:hover {
   transform: scale(1.05);
-}
+} */
 
 .card-name {
   color: #333;
