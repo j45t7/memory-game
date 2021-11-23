@@ -1,0 +1,59 @@
+/* .card {
+  position: relative;
+} */
+.card {
+  /* width: 12rem auto;
+  display: block; */
+  /* border: 2px solid #fff; */
+  /* border-radius: 6px; */
+  height: 12rem;
+  width: 12rem;
+  background: #f0da9f;
+  color: #fbca1c;
+  padding: 1rem;
+  border-radius: 10px;
+  border-top: 0.5px solid #cebf7b;
+  border-bottom: 0.5px solid #cebf7b;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+  border: 3px solid #fbca1c;
+}
+
+/* front of card - the picture */
+.front .card {
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+  position: absolute;
+}
+.flipped .front .card {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+/* back of card - cover */
+.backImg {
+  width: 100%;
+  height: 12rem;
+  object-fit: contain;
+  padding-bottom: 35px;
+}
+.back .card {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flipped .back .card {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+.card-name {
+  color: #333;
+}
+
+.card-type {
+  color: #464646;
+}
