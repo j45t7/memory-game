@@ -25,18 +25,20 @@ body {
   width: 15rem;
 }
 
-.deck {
+.deck--four {
+  grid-template-columns: repeat(4, 160px);
   display: grid;
   margin: 0 auto;
   justify-content: center;
   gap: 5px;
 }
-.deck--four {
-  grid-template-columns: repeat(4, 160px);
-}
 
 .deck--five {
   grid-template-columns: repeat(5, 160px);
+  display: grid;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 5px;
 }
 
 .moves {

@@ -6,7 +6,7 @@ const URL = 'https://pokeapi.co/api/v2/pokemon'
 
 function App() {
   const [pokemons, setPokemons] = useState([])
-  const [level, setLevel] = useState(8)
+  const [level, setLevel] = useState('8')
   const [moves, setMoves] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
@@ -126,7 +126,7 @@ function App() {
           Hard
         </label>
       </form>
-      <div className={level === '10' ? 'deck deck--five' : 'deck deck--four'}>
+      <div className={level === '10' ? 'deck--five' : 'deck--four'}>
         {pokemons.map((pokemon) => (
           <Card
             key={pokemon.pokeId}
