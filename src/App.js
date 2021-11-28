@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import './App.css'
+import Button from './components/Button'
 import Card from './components/Card'
 import Moves from './components/Moves'
 import SelectLevel from './components/SelectLevel'
@@ -18,6 +19,7 @@ function App() {
   const [disabled, setDisabled] = useState(false)
 
   const getPokemonData = useCallback(async () => {
+    console.log('new game')
     try {
       const allPokemonData = new Array(200)
         .fill(null)
@@ -45,7 +47,9 @@ function App() {
         }
         pokeData.push(transformedPokemon)
       }
-
+      setChoiceOne(null)
+      setChoiceTwo(null)
+      setMoves(0)
       setPokemons(pokeData)
     } catch (error) {
       setError(error.message)
@@ -123,6 +127,7 @@ function App() {
     <div className='App'>
       <Title />
       <SelectLevel level={level} handleChange={handleChange} />
+      <Button getPokemonData={getPokemonData} />
       {content}
       <Moves moves={moves} />
     </div>
