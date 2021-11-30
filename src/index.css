@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
   margin: 0;
@@ -9,14 +9,14 @@
 body {
   background: #e7e7e5;
   line-height: 1.5;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .title {
   text-align: center;
   color: #e4c439;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
@@ -43,18 +43,6 @@ body {
 
 .moves {
   padding: 1rem;
-}
-
-.level {
-  padding: 1rem;
-}
-
-.level__label {
-  padding: 1rem;
-}
-
-.level__input {
-  margin: 0.25rem;
 }
 
 .loading {
