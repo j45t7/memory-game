@@ -24,8 +24,6 @@ function App() {
   const getPokemonData = useCallback(async () => {
     console.log('new game')
     setIsLoading(true)
-    setShowModal(false)
-    setMatched(0)
     try {
       const allPokemonData = new Array(200)
         .fill(null)
@@ -70,12 +68,10 @@ function App() {
   const handleChoice = (pokemon) => {
     choiceOne ? setChoiceTwo(pokemon) : setChoiceOne(pokemon)
   }
-
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       setDisabled(true)
       if (choiceOne.image === choiceTwo.image) {
-        console.log('cards match')
         setPokemons((prevCards) => {
           return prevCards.map((pokemon) => {
             if (pokemon.image === choiceOne.image) {
@@ -109,12 +105,10 @@ function App() {
     setMatched(0)
   }
   const checkCompletion = useCallback(() => {
-    console.log(pokemons.length / 2)
-    console.log(matched)
-    if (matched === pokemons.length / 2) {
+    if (matched === +level) {
       setShowModal(true)
     }
-  }, [matched, pokemons.length])
+  }, [matched, level])
 
   const handleRestart = () => {
     getPokemonData()
@@ -125,7 +119,7 @@ function App() {
 
   useEffect(() => {
     checkCompletion()
-  }, [checkCompletion])
+  }, [checkCompletion, matched])
 
   let content = (
     <div className={level === '10' ? 'deck--five' : 'deck--four'}>
@@ -154,7 +148,9 @@ function App() {
     <div className='App'>
       <Title />
       <SelectLevel level={level} handleChange={handleChange} />
-      {showModal && <Modal handleRestart={handleRestart} visible={showModal} />}
+      {showModal && (
+        <Modal handleRestart={handleRestart} setShowModal={setShowModal} />
+      )}
       <Button handleRestart={handleRestart} />
       {content}
       <Moves moves={moves} />
