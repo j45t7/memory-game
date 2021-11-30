@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './SelectLevel.css'
 const SelectLevel = ({ level, handleChange }) => {
   return (
     <form className='level'>

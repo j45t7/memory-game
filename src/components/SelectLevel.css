@@ -1,0 +1,12 @@
+.level {
+  padding: 0.5rem;
+  font-size: 10px;
+}
+
+.level__label {
+  padding: 1rem;
+}
+
+.level__input {
+  margin: 0.25rem;
+}

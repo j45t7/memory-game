@@ -20,6 +20,7 @@
   transform: rotateY(90deg);
   transition: all ease-in 0.2s;
   position: absolute;
+  font-size: 10px;
 }
 .flipped .front .card {
   transform: rotateY(0deg);
