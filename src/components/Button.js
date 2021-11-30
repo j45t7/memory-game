@@ -1,8 +1,8 @@
 import React from 'react'
 import './Button.css'
-const Button = ({ getPokemonData }) => {
+const Button = ({ handleRestart }) => {
   return (
-    <button className='btn' onClick={getPokemonData}>
+    <button className='btn' onClick={handleRestart}>
       New Game
     </button>
   )
