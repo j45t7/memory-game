@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import './App.css'
 import Button from './components/Button'
 import Card from './components/Card'
+import Modal from './components/Modal'
 import Moves from './components/Moves'
 import SelectLevel from './components/SelectLevel'
 import Title from './components/Title'
@@ -9,7 +10,7 @@ import Title from './components/Title'
 const URL = 'https://pokeapi.co/api/v2/pokemon'
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
   const [pokemons, setPokemons] = useState([])
   const [level, setLevel] = useState('8')
@@ -17,9 +18,14 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false)
+  const [matched, setMatched] = useState(0)
+  const [showModal, setShowModal] = useState(false)
 
   const getPokemonData = useCallback(async () => {
     console.log('new game')
+    setIsLoading(true)
+    setShowModal(false)
+    setMatched(0)
     try {
       const allPokemonData = new Array(200)
         .fill(null)
@@ -80,6 +86,7 @@ function App() {
           })
         })
         resetTurn()
+        setMatched((prevMatched) => prevMatched + 1)
       } else {
         console.log("cards don't match")
         setTimeout(() => resetTurn(), 1000)
@@ -98,7 +105,27 @@ function App() {
   const handleChange = (event) => {
     event.preventDefault()
     setLevel(event.target.value)
+    setShowModal(false)
+    setMatched(0)
   }
+  const checkCompletion = useCallback(() => {
+    console.log(pokemons.length / 2)
+    console.log(matched)
+    if (matched === pokemons.length / 2) {
+      setShowModal(true)
+    }
+  }, [matched, pokemons.length])
+
+  const handleRestart = () => {
+    getPokemonData()
+    setShowModal(false)
+    resetTurn()
+    setMatched(0)
+  }
+
+  useEffect(() => {
+    checkCompletion()
+  }, [checkCompletion])
 
   let content = (
     <div className={level === '10' ? 'deck--five' : 'deck--four'}>
@@ -127,7 +154,8 @@ function App() {
     <div className='App'>
       <Title />
       <SelectLevel level={level} handleChange={handleChange} />
-      <Button getPokemonData={getPokemonData} />
+      {showModal && <Modal handleRestart={handleRestart} visible={showModal} />}
+      <Button handleRestart={handleRestart} />
       {content}
       <Moves moves={moves} />
     </div>
