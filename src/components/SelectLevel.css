@@ -10,3 +10,18 @@
 .level__input {
   margin: 0.25rem;
 }
+
+@media screen and (max-width: 500px) {
+  .level {
+    padding: 0.5rem;
+    font-size: 10px;
+  }
+
+  .level__label {
+    padding: 0.25rem;
+  }
+
+  .level__input {
+    margin: 0.25rem;
+  }
+}

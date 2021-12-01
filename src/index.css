@@ -49,3 +49,37 @@ body {
   height: 500px;
   padding-top: 200px;
 }
+
+@media screen and (min-width: 500px) and (max-width: 750px) {
+  .title {
+    font-size: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .title__image {
+    width: 8rem;
+  }
+
+  .deck--four {
+    grid-template-columns: repeat(4, 55px);
+    display: grid;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .deck--five {
+    grid-template-columns: repeat(5, 55px);
+    display: grid;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 5px;
+  }
+}
