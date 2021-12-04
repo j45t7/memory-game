@@ -1,6 +1,6 @@
 import React from 'react'
-
-const Moves = ({ moves}) => {
+import './Moves.css'
+const Moves = ({ moves }) => {
   return <p className='moves'>Moves: {moves}</p>
 }
 

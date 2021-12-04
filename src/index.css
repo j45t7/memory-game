@@ -41,10 +41,6 @@ body {
   gap: 5px;
 }
 
-.moves {
-  padding: 1rem;
-}
-
 .loading {
   height: 500px;
   display: flex;

@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import './App.css'
 import Button from './components/Button'
 import Card from './components/Card'
+import Footer from './components/Footer'
 import Modal from './components/Modal'
 import Moves from './components/Moves'
 import SelectLevel from './components/SelectLevel'
@@ -158,6 +159,7 @@ function App() {
       <Button handleRestart={handleRestart} />
       {content}
       <Moves moves={moves} />
+      <Footer />
     </div>
   )
 }
