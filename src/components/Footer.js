@@ -1,10 +1,11 @@
 import React from 'react'
 import './Footer.css'
+import heartIMG from './img/pixel-heart.png'
 const Footer = () => {
   return (
     <div className='footer'>
       <p>
-        Made with <img className='heart' src='img/pixel-heart.png' alt='' /> by
+        Made with <img className='heart' src={heartIMG} alt='pixel-heart' /> by
         <a
           className='link'
           href='https://github.com/j45t7'

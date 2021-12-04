@@ -1,7 +1,7 @@
 import React from 'react'
 import './Card.css'
+import pokemonIMG from './img/pokemon.png'
 
-const cardBack = '/img/pokemon.png'
 const Card = ({ pokemon, flipped, disabled, handleChoice }) => {
   const handleClick = () => {
     if (!disabled) {
@@ -22,7 +22,7 @@ const Card = ({ pokemon, flipped, disabled, handleChoice }) => {
         <div className='card'>
           <img
             className='back__image'
-            src={cardBack}
+            src={pokemonIMG}
             alt='card back'
             onClick={handleClick}
           />
