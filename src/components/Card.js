@@ -13,7 +13,7 @@ const Card = ({ pokemon, flipped, disabled, handleChoice }) => {
     <div className={flipped ? 'flipped' : ''}>
       <div className='front'>
         <div className='card'>
-          <img src={pokemon.image} alt='card front' />
+          <img className='front__image' src={pokemon.image} alt='card front' />
           <p className='card__name'>{pokemon.name}</p>
           <p className='card__type'>{pokemon.type}</p>
         </div>
