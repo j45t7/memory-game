@@ -106,7 +106,7 @@ function App() {
   }
   const checkCompletion = useCallback(() => {
     if (matched === +level) {
-      setShowModal(true)
+      setTimeout(() => setShowModal(true), 500)
     }
   }, [matched, level])
 
@@ -149,7 +149,11 @@ function App() {
       <Title />
       <SelectLevel level={level} handleChange={handleChange} />
       {showModal && (
-        <Modal handleRestart={handleRestart} setShowModal={setShowModal} />
+        <Modal
+          pokemons={pokemons}
+          handleRestart={handleRestart}
+          setShowModal={setShowModal}
+        />
       )}
       <Button handleRestart={handleRestart} />
       {content}
