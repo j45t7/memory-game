@@ -1,10 +1,6 @@
 # Pokemon Memory Game
 
-<div style="width: 20px;">
-
-![pokeball](./assets/pokeball.png)
-
-</div>
+<img width=20 src="./assets/pokeball.png"/>
 
 This fun memory game with Pokemons.
 
