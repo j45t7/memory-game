@@ -14,7 +14,7 @@ Go to [this page](https://j45t7.github.io/memory-game/) and start playing!
 
 ## How this works
 
-This application utilizes [PokéAPI](hhttps://pokeapi.co/).
+This application utilizes [PokéAPI](https://pokeapi.co/).
 
 ## How to run locally
 
