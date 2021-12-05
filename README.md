@@ -12,9 +12,15 @@ This fun memory game with Pokemons.
 
 Go to [this page](https://j45t7.github.io/memory-game/) and start playing!
 
-## How this works
+## Tech Stack
 
-This application utilizes [PokéAPI](https://pokeapi.co/).
+- React JS
+- CSS
+- Hosting: GitHub Pages
+
+### Features
+
+- This application utilizes [PokéAPI](https://pokeapi.co/).
 
 ## How to run locally
 
