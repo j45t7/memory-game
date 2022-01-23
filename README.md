@@ -2,7 +2,7 @@
 
 <img width=20 src="./assets/pokeball.png"/>
 
-This fun memory game with Pokemons.
+It is fun memory game with Pokemons.
 
 ## How does it look like?
 
